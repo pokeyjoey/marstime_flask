@@ -1,0 +1,128 @@
+{% extends "calendar_base.html" %}
+{% block content %}
+
+    <div class="container theme-showcase" role="main">
+
+        <h2>Calculating a Martian Date</h2>
+
+            <P><BR>Calculating a Martian date is not too difficult. The trickiest part is 
+            figuring out what day it is on Earth. It's not enough to say, "It's 23 November 
+            1993, dummy." You need to know, instead, how far along in the year you are. Is 
+            November 23 the 314th day of the year, 336th, 202nd, what? You could add up the 
+            days from January through October and add 23. You could simply pull out a 
+            calendar and count the days. Or you could fudge it a bit and do the following: 
+            multiply the number of full months that have passed by 30.4, (the average number 
+            of days in an Earthly month) and then add the number of days that have passed in 
+            the month in question. In the case of November 23 that would be 10 months 
+            (January through October) times 30.4, or 304. Add 23 and you have 327. To figure 
+            out how far along you are in the year, simply divide the number of days by 365 - 
+            in this case you would divide 327 by 365 and end up with 0.896 - you're 
+            896/1000ths of the way through the year. This may seem a bit esoteric, but it 
+            necessary for calculating Martian dates.<BR><BR>To calculate the Martian date 
+            for an Earth date, you use the following equation: Mars date =&nbsp;(8/15) * 
+            (Earth date - 1961) +1."Earth date" in this equation is composed of the year, 
+            plus that bit of esoteric information, how far along you are in the year. So, 
+            for purposes of translating to a Martian date, 23 November 1993 becomes 1993 + 
+            0.896, or 1993.896. Now your ready to undertake some math, to wit: (8/15) * 
+            (1993.896 - 1961) +1. And the answer is ... 18.544. What does that tell you? 
+            Think of it as the Martian equivalent of the Earth date you used in the equation 
+            - the integer portion gives you the year, the remainder how far along you are in 
+            the year. Ergo. 183544 indicates that you're 544/1000ths through the Martian 
+            year 18.<BR><BR>To determine the Martian month and sol, simply work backwards 
+            from the fact that you're 544/1000ths of the way through a Martian year. 
+            Multiplying 669 (the number of sols in a Martian year) by .544results in sol 
+            364. From the table above, you can see that sol 364 resides in the Martian month 
+            of Scorpius, which begins on sol 318. Subtracting 318 from 364 gives you sol 46. 
+            Since Martian months (like Earth Months) begin on sol 1 (it's November 1, not 
+            November 0), add 1 to the sol number: 46 + 1 = 47. The date? 47 Scorpius 
+            XVIII.</P>
+
+            <table class="table">
+               <thead>
+                  <tr>
+                    <th>Month</th>
+                    <th>Sols</th>
+                    <th>Begins on Sol</th>
+                    <th>Notes</th>
+                  <tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gemini</td>
+                        <td>61</td>
+                        <td>1</td>
+                        <td>Gemini 1 - vernal equinox</td>
+                    </tr>
+                     <tr>
+                        <td>Cancer</td>
+                        <td>65</td>
+                        <td>62</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Leo</td>
+                        <td>66</td>
+                        <td>127</td>
+                        <td>Leo 24 - Mars at aphelion</td>
+                    </tr>
+                    <tr>
+                        <td>Virgo</td>
+                        <td>65</td>
+                        <td>193</td>
+                        <td>Virgo 1 - summer solstice</td>
+                    </tr>
+                    <tr>
+                        <td>Libra</td>
+                        <td>60</td>
+                        <td>258</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Scorpius</td>
+                        <td>54</td>
+                        <td>318</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Sagittarius</td>
+                        <td>50</td>
+                        <td>372</td>
+                        <td>Sagittarius&nbsp;1&nbsp;- autumnal equinox</td>
+                    </tr>
+                    <tr>
+                        <td>Capricorn</td>
+                        <td>47</td>
+                        <td>422</td>
+                        <td>Dust&nbsp;storm&nbsp;season begins</td>
+                    </tr>
+                    <tr>
+                        <td>Aquarius</td>
+                        <td>46</td>
+                        <td>469</td>
+                        <td>Aquarius 16 - Mars at perihelion</td>
+                    </tr>
+                    <tr>
+                        <td>Pisces</td>
+                        <td>48</td>
+                        <td>515</td>
+                        <td>Pisces&nbsp;1 - winter solstice</td>
+                    </tr>
+                    <tr>
+                        <td>Aries</td>
+                        <td>51</td>
+                        <td>563</td>
+                        <td>Dust storm&nbsp;season ends</td>
+                    </tr>
+                    <tr>
+                        <td>Taurus</td>
+                        <td>56</td>
+                        <td>614</td>
+                        <td>Taurus 56 -&nbsp;Martian New Year's Eve</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a class="btn btn-primary" href="calendar_history" role="button">Great Dates in Martian History <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a>
+
+    </div> <!-- /container -->
+
+{% endblock %}
