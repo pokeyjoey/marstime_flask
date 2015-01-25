@@ -1,2 +1,2 @@
 # marstime
-Python Flask microsite.
+A Python Flask microsite.
