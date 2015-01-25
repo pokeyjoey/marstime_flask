@@ -5,7 +5,7 @@ active_tabs = {
     'index_active': '',
     'calculate_active': '',
     'history_active': '',
-    'areogator_activei': ''
+    'areogator_active': ''
 }
 
 @app.route('/zubrin_calendar')
@@ -36,7 +36,7 @@ def calendar_history():
 
 @app.route('/calendar_areogator')
 def calendar_areogator():
-    set_active_tab('areogator_activei')
+    set_active_tab('areogator_active')
     locals().update(active_tabs)
 
     return render_template('calendar_areogator.html', **locals())
