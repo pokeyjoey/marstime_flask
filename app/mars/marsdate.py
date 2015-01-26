@@ -112,7 +112,7 @@ class MarsDate(object):
         for last_day_of_month in self.months_of_mars.iterkeys():
             if day_of_year_mars <= last_day_of_month:
                 day_of_month = \
-                    day_of_year_mars - last_day_of_previous_month + 2
+                    (day_of_year_mars - (last_day_of_previous_month + 1)) + 1
                 break
 
             last_day_of_previous_month = last_day_of_month
