@@ -1,7 +1,6 @@
 import datetime
 import calendar
 import math
-import flask_whooshalchemy
 import roman
 
 from collections import OrderedDict
