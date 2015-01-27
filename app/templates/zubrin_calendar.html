@@ -1,0 +1,626 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>A Calendar for Mars</TITLE>
+<META 
+content="Mars needs a calendar - using Earth dates just won't do. If I tell you it is February 1, you know that it is freezing in Minneapolis, but what does it tell you about conditions on Mars?" 
+name=description>
+<META 
+content="Mars, Calendars, Calendar, Zubrin, Mars Society, Time, Space, Space Travel, Science, Time Keeping, Science Fiction, Solar System, Planets" 
+name=keywords>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="MSHTML 5.50.4207.2601" name=GENERATOR></HEAD>
+<BODY vLink=#800080 link=#0000ff bgColor=#ffffff>
+<P align=center><A href="http://www.marssociety.org/"><IMG height=90 
+src="/static/images/marstime/msbanner2b.gif" width=432 border=0></A></P>
+<P align=center><A name=Top><IMG height=7 
+src="/static/images/marstime/bar.gif" width=514></A></P>
+<P align=center><FONT size=6>A Calendar for Mars</FONT></P>
+<P align=center><IMG height=7 src="/static/images/marstime/bar.gif" 
+width=514></P>
+<UL type=disc>
+  <LI><A href="file:///C:/marsweb/Zubrin.html#Top">A Calendar for Mars</A> 
+  <UL>
+    <LI><A href="file:///C:/marsweb/Zubrin.html#The_Martian_Year">The Martian 
+    Year - Calculating a Martian Date</A> 
+    <LI><A 
+    href="file:///C:/marsweb/Zubrin.html#Great_Dates_in_Martian_History">Great 
+    Dates in Martian History</A> 
+    <LI><A href="file:///C:/marsweb/Zubrin.html#The_Mars_Areogator">The Mars 
+    Areogator<FONT size=2> </FONT>- Determining where Mars is with respect to 
+    the Earth</A> </LI></UL>
+  <LI><A href="file:///C:/marsweb/Zubrin.html#The_Mars_Society"><FONT 
+  face="EngraversGothic BT,BankGothic Lt BT" color=#ff0000>Attention - Join the 
+  Mars Society</FONT></A> 
+  <LI><A href="file:///C:/marsweb/Zubrin.html#Mars_Links">Mars Links</A></LI></UL>
+<HR>
+
+<HR>
+
+<P align=center><A name=A_Calendar_for_Mars><FONT size=2><EM>note:Current Time 
+is Local Mars Solar Time at the targeted Mars Pathfinder Landing 
+Site</EM></FONT></A></P>
+<P align=center><FONT size=5><EM>A Calendar for Mars</EM></FONT></P>
+<P align=center>By Dr. Robert Zubrin</P>
+<DIV align=center>
+<CENTER>
+<TABLE cellSpacing=0 width=278 border=0>
+  <TBODY>
+  <TR>
+    <TD width=140>
+      <P align=center><FONT size=4>Today's Date</FONT></P></TD>
+    <TD width=32><SPACER type="block" width="50"></TD>
+    <TD width=100>
+      <P align=center><FONT size=4>LMST</FONT></P></TD></TR>
+  <TR>
+    <TD width=140 height=20><APPLET code=marsdate.class align=textTop 
+      width=160 height=20><PARAM NAME="MLongitude" VALUE="34"><PARAM NAME="align" VALUE="textTop"><PARAM NAME="code" VALUE="marsdate.class"><PARAM NAME="height" VALUE="20"><PARAM NAME="width" VALUE="140"><PARAM NAME="codeBase" VALUE="/static/java/marstime/">
+                                                                              
+      You do not have a Java enabled Browser           </APPLET> </TD>
+    <TD width=32 height=20><SPACER type=" block " width=" 50 " 
+height=" 20"></TD>
+    <TD width=100 height=20><APPLET code=lmstparm.class align=baseline 
+      width=100 height=20><PARAM NAME="MLongitude" VALUE="195"><PARAM NAME="align" VALUE="baseline"><PARAM NAME="code" VALUE="lmstparm.class"><PARAM NAME="height" VALUE="20"><PARAM NAME="width" VALUE="100"><PARAM NAME="codeBase" VALUE="/static/java/marstime/">
+      																																				You do not have a Java enabled 
+      browser					</APPLET> </TD></TR></TBODY></TABLE></CENTER></DIV>
+<HR>
+
+<P><B>Note:</B> This is a reprint of an article published in Ad Astra, the 
+magazine of the National Space Society (Ad Astra, Nov/Dec93, vol. 5 Issue 6, 
+p25). This material is reproduced with the permission of the author, Dr. Robert 
+Zubrin.</P>
+<P>Mars needs a&nbsp;calendar - using Earth dates just won't do. If I tell you 
+it is February 1, you know that it is freezing in Minneapolis and high summer in 
+Sydney, but what does it tell you about conditions on Mars?<BR><BR>The idea of a 
+Martian calendar and timekeeping system is not original, and many have been 
+designed in the past. Edgar Rice Burroughs developed an intricate calendar 
+system for his Barsoomian civilization. But the problem with Burrough's, and all 
+the successor Martian time systems that I have seen, is that they are not 
+physical - they bear no relation to the Martian seasons or to the timekeeping 
+needs of Mars surface navigation. Furthermore, the authors of such systems have 
+neglected to provide a&nbsp;method of converting Martian dates to terrestrial 
+ones, and vice-versa.<BR><BR>Now devising a&nbsp;Martian calendar is a&nbsp;bit 
+trickier than it might seem at first. Mars has a year consisting of 669 Martian 
+days, or "sols", each of which consists of 24 hours and 39.6 minutes of 
+terrestrial time. Most previous calendars have simply divided this up into 
+convenient subdivisions, such as 12 months of 55 to&nbsp;56 sols each. 
+Time-keeping systems have usually preserved terrestrial clock units, with an 
+interstitial partial hour thrown in at some time of the day, or else employed 
+some totally novel, usually decimal-based clock.<BR><BR>Such equipartitioned 
+months don't work for Mars because Mars orbit is elliptical, which causes it's 
+seasons to be of unequal length. And a clock that uses unequal hours would be a 
+nightmare for those attempting navigation or astronomy from the Martian surface, 
+while a decimal or other novelty would probably be disorienting and in any case 
+would a correspondingly complete overhaul of the system of surface geographical 
+co-ordinates in order to make it's use convenient.<BR><BR>The practical answer 
+to the clock problem is simple - just divide up the Martian day into 24 Martian 
+hours, each composed of 60 Martian minutes, each of which is composed of 60 
+Martian seconds. The&nbsp;conversion facto between Martian days, hours, minutes, 
+and seconds and their terrestrial equivalents would thus be 1.0275 across the 
+board. A&nbsp;time of day on Mars, say 9a.m, would have exactly the same 
+physical significance with regard to the orientation of the planet towards the 
+Sun as it does on Earth. All the equations of celestial navigation would also 
+remain valid, although stellar latitude measurements would have to be taken with 
+respect to the Martian pole star, which is located at 21.18 hours right 
+ascension, 52.89 north declination (about halfway between Deneb and Alpha 
+Cephei).<BR><BR>Such a clock solves all the practical problems associated with 
+daily time keeping on Mars. Unfortunately, such a clock would annoy Physicists 
+who regard the terrestrial second as the sacrosanct fundamental unit of physical 
+time. They shouldn't worry - Martian crystallographers and others who require a 
+high degree of precision in quoting their measurements of frequencies and 
+whatnot can still quote their measurements in terms of terrestrial seconds. The 
+Standard International system of physical units can remain intact. However, for 
+purposes of operating on Mars, the terrestrial second is no more a useful unit 
+of time-keeping than the terrestrial day, and must yield to its Martian 
+counterpart.<BR><BR><BR>The calendar is a more interesting problem. In order to 
+predict the seasons, a calendar must divide the&nbsp;planet's orbit not into 
+equal divisions of days, but into equal angles of travel around the Sun. If we 
+want months to be useful units and choose to retain the terrestrial definition 
+of a month as a twelfth of a year, then a month really is 30 degrees of travel 
+around the Sun.<BR><BR>So, we have our months, but what should we name them? 
+Using terrestrial month names could be confusing, and a&nbsp;totally new system 
+would be completely arbitrary. However, there is a set of names available which 
+has long been universally known to humanity and which has real physical 
+significance not only to Mars, but to any planet in our solar system - the signs 
+of the zodiac.<BR><BR>All the constellations of the zodiac lie in the plane of 
+the planets. Ancient astrologers, having a geocentric (Earth - centered) point 
+of view, named the months for whatever zodiacal constellation the Sun appeared 
+to be located in as viewed from Earth. An interplanetary culture, though, must 
+adopt a heliocentric (Sun - centered) point of view. Therefore, I have chosen to 
+name the Martian months for whatever constellation mars would be found in as 
+seen from the Sun.<BR><BR>For Martian colonists the sign of the month would be 
+seen high in the sky during the midnight hours of a given month. It is currently 
+the custom among planetary scientists to start a planet's year with the vernal 
+equinox (the beginning of spring in the northern hemisphere, March 21 on 
+Earth),and so, consistent with that custom, the Martian year begins with the 
+month of Gemini and ends with Taurus.<BR><BR>Now for a complete system of 
+dating, it is necessary not only to know he month of a&nbsp;year, &nbsp;but also 
+what year it is in some absolute sense - you need some year "I". For this year 
+the corresponding terrestrial year is 1961. It happens that the first day of the 
+year, 1 January 1961, coincides with the first day of the Martian year, 1 
+Gemini. In addition, 1961 was the latest year prior to the commencement of Mars 
+exploration where this held true. The notation I've adopted for this calendar 
+places the day of the month first, followed by the name of the month followed by 
+the year in&nbsp;Roman numerals. Thus the calendar starts with 1 Gemini 
+I.<BR><BR>While such a calendar may be interesting, it is still difficult for 
+residents of Earth to use, unless a means can be provided to convert Earth dates 
+to mars dates. I have invented such a device, which I call an "areogator." You 
+can use it to find the month (and therefore season) on Mars during any chosen 
+month on Earth, or vice - versa; the relative positions and angles of Earth and 
+Mars about the Sun; as well as where in the sky Mars will be as seen from Earth, 
+or&nbsp;vice-versa, at any given time in the past or future.<BR><BR>It's my firm 
+belief that we now posses the technology that could allow a human landing on 
+Mars within 10 years of the time a decision is made to launch the program. It's 
+now 1993, and it's worth noting that 2003 would be a particularly good year to 
+launch a first Mars expedition, since a low energy trajectory is possible that 
+year that would get astronauts to Mars in just 126 days. Launch would take place 
+June 22, arrival would be October 26. On arrival at Mars the date will be 46 
+Pisces XXIII, and the dust storm season will be drawing to a close. Shortly 
+after capture into orbit, the last of the clouds will lift, revealing the 
+surface of Mars in fine southern weather, and a landing will be called for. 
+It'll be about time.</P>
+<P><A href="file:///C:/marsweb/Zubrin.html#Top">Back to Top </A></P>
+<HR>
+
+<P align=center><A name=The_Martian_Year><FONT size=4><B>The Martian 
+Year</B></FONT> </A></P>
+<DIV align=center>
+<CENTER>
+<TABLE cellSpacing=1 cellPadding=2 border=1>
+  <TBODY>
+  <TR>
+    <TD>
+      <P align=center><B>Month</B></P></TD>
+    <TD>
+      <P align=center><B>Sols</B></P></TD>
+    <TD>
+      <P align=center><B>Begins</B></P>
+      <P align=center><B>&nbsp;on Sol </B>&nbsp;</P></TD>
+    <TD>
+      <P align=center><B>Notes</B></P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>Gemini</P></TD>
+    <TD>
+      <P align=center>61</P></TD>
+    <TD>
+      <P align=center>1</P></TD>
+    <TD>
+      <P align=center>Gemini 1 - vernal equinox</P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>Cancer</P></TD>
+    <TD>
+      <P align=center>65</P></TD>
+    <TD>
+      <P align=center>62</P></TD>
+    <TD>&nbsp; </TD></TR>
+  <TR>
+    <TD>
+      <P align=center>Leo</P></TD>
+    <TD>
+      <P align=center>66</P></TD>
+    <TD>
+      <P align=center>127</P></TD>
+    <TD>
+      <P align=center>Leo 24 - Mars at aphelion</P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>Virgo</P></TD>
+    <TD>
+      <P align=center>65</P></TD>
+    <TD>
+      <P align=center>193</P></TD>
+    <TD>
+      <P align=center>Virgo 1 - summer solstice</P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>Libra</P></TD>
+    <TD>
+      <P align=center>60</P></TD>
+    <TD>
+      <P align=center>258</P></TD>
+    <TD>&nbsp; </TD></TR>
+  <TR>
+    <TD>
+      <P align=center>Scorpius</P></TD>
+    <TD>
+      <P align=center>54</P></TD>
+    <TD>
+      <P align=center>318</P></TD>
+    <TD>&nbsp; </TD></TR>
+  <TR>
+    <TD>
+      <P align=center>Sagittarius</P></TD>
+    <TD>
+      <P align=center>50</P></TD>
+    <TD>
+      <P align=center>372</P></TD>
+    <TD>
+      <P align=center>Sagittarius&nbsp;1&nbsp;- autumnal equinox</P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>Capricorn</P></TD>
+    <TD>
+      <P align=center>47</P></TD>
+    <TD>
+      <P align=center>422</P></TD>
+    <TD>
+      <P align=center>Dust&nbsp;storm&nbsp;season begins</P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>Aquarius</P></TD>
+    <TD>
+      <P align=center>46</P></TD>
+    <TD>
+      <P align=center>469</P></TD>
+    <TD>
+      <P align=center>Aquarius 16 - Mars at perihelion</P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>Pisces</P></TD>
+    <TD>
+      <P align=center>48</P></TD>
+    <TD>
+      <P align=center>515</P></TD>
+    <TD>
+      <P align=center>Pisces&nbsp;1 - winter solstice</P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>Aries</P></TD>
+    <TD>
+      <P align=center>51</P></TD>
+    <TD>
+      <P align=center>563</P></TD>
+    <TD>
+      <P align=center>Dust storm&nbsp;season ends</P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>Taurus</P></TD>
+    <TD>
+      <P align=center>56</P></TD>
+    <TD>
+      <P align=center>614</P></TD>
+    <TD>
+      <P align=center>Taurus 56 -&nbsp;Martian New Year's 
+Eve</P></TD></TR></TBODY></TABLE></CENTER></DIV>
+<P><BR>Calculating a Martian date is not too difficult. The trickiest part is 
+figuring out what day it is on Earth. It's not enough to say, "It's 23 November 
+1993, dummy." You need to know, instead, how far along in the year you are. Is 
+November 23 the 314th day of the year, 336th, 202nd, what? You could add up the 
+days from January through October and add 23. You could simply pull out a 
+calendar and count the days. Or you could fudge it a bit and do the following: 
+multiply the number of full months that have passed by 30.4, (the average number 
+of days in an Earthly month) and then add the number of days that have passed in 
+the month in question. In the case of November 23 that would be 10 months 
+(January through October) times 30.4, or 304. Add 23 and you have 327. To figure 
+out how far along you are in the year, simply divide the number of days by 365 - 
+in this case you would divide 327 by 365 and end up with 0.896 - you're 
+896/1000ths of the way through the year. This may seem a bit esoteric, but it 
+necessary for calculating Martian dates.<BR><BR>To calculate the Martian date 
+for an Earth date, you use the following equation: Mars date =&nbsp;(8/15) * 
+(Earth date - 1961) +1."Earth date" in this equation is composed of the year, 
+plus that bit of esoteric information, how far along you are in the year. So, 
+for purposes of translating to a Martian date, 23 November 1993 becomes 1993 + 
+0.896, or 1993.896. Now your ready to undertake some math, to wit: (8/15) * 
+(1993.896 - 1961) +1. And the answer is ... 18.544. What does that tell you? 
+Think of it as the Martian equivalent of the Earth date you used in the equation 
+- the integer portion gives you the year, the remainder how far along you are in 
+the year. Ergo. 183544 indicates that you're 544/1000ths through the Martian 
+year 18.<BR><BR>To determine the Martian month and sol, simply work backwards 
+from the fact that you're 544/1000ths of the way through a Martian year. 
+Multiplying 669 (the number of sols in a Martian year) by .544results in sol 
+364. From the table above, you can see that sol 364 resides in the Martian month 
+of Scorpius, which begins on sol 318. Subtracting 318 from 364 gives you sol 46. 
+Since Martian months (like Earth Months) begin on sol 1 (it's November 1, not 
+November 0), add 1 to the sol number: 46 + 1 = 47. The date? 47 Scorpius 
+XVIII.</P>
+<P><A href="file:///C:/marsweb/Zubrin.html#Top">&nbsp; Back to Top </A></P>
+<HR>
+
+<P align=center><A name=Great_Dates_in_Martian_History><FONT size=4><B>Great 
+Dates in Martian History</B></FONT></A></P>
+<DIV align=center>
+<CENTER>
+<TABLE cellSpacing=1 cellPadding=2 border=1>
+  <TBODY>
+  <TR>
+    <TD>
+      <P align=center><B>Occasion</B></P></TD>
+    <TD>
+      <P align=center><B>Earth&nbsp;Date</B></P></TD>
+    <TD>
+      <P align=center><B>Mars&nbsp;Date</B></P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>Calendar begins</P></TD>
+    <TD>
+      <P align=center>1&nbsp;January&nbsp;1961</P></TD>
+    <TD>
+      <P align=center>1 Gemini I</P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>Mariner 4&nbsp;flyby</P></TD>
+    <TD>
+      <P align=center>15 July 1965</P></TD>
+    <TD>
+      <P align=center>25 Libra III</P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>Mariner&nbsp;6&nbsp;flyby</P></TD>
+    <TD>
+      <P align=center>31&nbsp;July 1969</P></TD>
+    <TD>
+      <P align=center>16 Sagittarius V</P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>Mariner 7&nbsp;flyby</P></TD>
+    <TD>
+      <P align=center>5&nbsp;August 1969</P></TD>
+    <TD>
+      <P align=center>20 Sagittarius V</P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>Mariner 9 in orbit</P></TD>
+    <TD>
+      <P align=center>14 November 1971</P></TD>
+    <TD>
+      <P align=center>20 Pisces VI</P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>Mars&nbsp;2 and 3 land</P></TD>
+    <TD>
+      <P align=center>2 December 1971</P></TD>
+    <TD>
+      <P align=center>38&nbsp;Pisces&nbsp;VI</P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>Viking 1 arrives n orbit</P></TD>
+    <TD>
+      <P align=center>19&nbsp;June 1976</P></TD>
+    <TD>
+      <P align=center>41 Leo IX</P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>Viking&nbsp;1 lands</P></TD>
+    <TD>
+      <P align=center>20 July 1976</P></TD>
+    <TD>
+      <P align=center>6&nbsp;Virgo IX</P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>Viking 2&nbsp;lands</P></TD>
+    <TD>
+      <P align=center>3&nbsp;September 1976</P></TD>
+    <TD>
+      <P align=center>49 Virgo&nbsp;IX</P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>Mars Observer disappears</P></TD>
+    <TD>
+      <P align=center>21 August 1993</P></TD>
+    <TD>
+      <P align=center>16&nbsp;Libra XVIII</P></TD></TR></TBODY></TABLE></CENTER></DIV>
+<P><A href="file:///C:/marsweb/Zubrin.html#Top">&nbsp; Back to Top </A></P>
+<HR>
+
+<P><BR><A name=The_Mars_Areogator><FONT size=4><STRONG>The Mars 
+Areogator</STRONG></FONT><STRONG> </STRONG></A></P>
+<P>You don't need a sixth sense to determine where Mars is at any given time - 
+just six cents, if you use the areogator.</P>
+<P align=center><BR><IMG height=527 
+src="/static/images/marstime/areogator.gif" width=531></P>
+<P><BR>Lets say you want to know the position of Mars during a given year, 1993 
+for example. Place a penny, representing Mars, on the diamond on Mars' orbit 
+(red) labeled "93", and a nickel, representing Earth, on the diamond on Earth's 
+orbit (blue) at the beginning of January. These were the comparative positions 
+of Earth and Mars around 1 January 1993. Note how close they are together, and 
+that Mars was on the opposite side of the Earth from the Sun. Such an 
+arrangement is called an "opposition," and as a result, Mars was bright and high 
+in the sky around midnight during January 1993. You can also see that it was 
+mid-Gemini, or early spring in the northern hemisphere on Mars at that time. To 
+move forward in time, just move Mars (the penny) forward one diamond and Earth 
+(the nickel) one diamond as well. You can see that by mid-February, Earth has 
+passed Mars, which is now in the month of Cancer. Move the Earth forward four 
+more diamonds to mid-August, the time Mars Observer was due at Mars, and Mars 
+forward four diamonds. You can see that when Mars Observer vanished, it was the 
+middle of the month of Libra, or mid-Summer in the Northern hemisphere on Mars. 
+Counting forward, you can see that it would take four more diamonds before Mars 
+enters the month of Capricorn, the beginning of the dust storm season, and this 
+corresponds to February 1994. You can also see that about that time Mars and 
+Earth will be on opposite sides of the Sun from each other.<BR><BR>If you want 
+to plan a mission for the year 2001, just repeat the procedure , placing your 
+Mars marker at the 01 diamond (in Virgo), and your Earth marker at January 1, 
+and start move them forward in tandem. I've included markers for all years 
+between 1993 and 2007. If you want too know the relative positions of Earth and 
+Mars for years before or after those indicated, just add or subtract any 
+multiple of 15 to the numbers given on the markings (i.e. 1975 is the same as 
+&nbsp;1990, which is the same as 2005, 2020, 2035, etc.)<BR><BR>If you want to 
+know what constellation to find Mars in at night, lay a straight edge between 
+Mars and Earth and then visualize a parallel line extending from the sun in the 
+same direction. Thus, during February 1993, Mars was in the Month of Cancer, but 
+a line parallel to Earth-Mars drawn through the Sun at that time would go 
+through Gemini, and this is the constellation Mars was seen in by observers on 
+Earth at that time. At the same time, any observers located on Mars would have 
+seen Earth in Sagittarius.&nbsp;</P>
+<P><A href="file:///C:/marsweb/Zubrin.html#Top">Back to Top </A></P>
+<HR>
+
+<P align=center><A name=The_Mars_Society><FONT color=#ff0000 
+size=6><STRONG><U>The Mars Society</U></STRONG></FONT></A></P>
+<P><FONT size=4>The purpose of the </FONT><A 
+href="http://www.marssociety.org/"><FONT size=4>Mars Society</FONT></A><FONT 
+size=4> will be to further the goal of the exploration and settlement of the Red 
+Planet. This will be done by:</FONT></P>
+<OL>
+  <LI><FONT size=4>Broad public outreach to instill the vision of pioneering 
+  Mars. </FONT>
+  <LI><FONT size=4>Support of ever more aggressive government funded Mars 
+  exploration programs around the world. </FONT>
+  <LI><FONT size=4>Conducting Mars exploration on a private basis. 
+</FONT></LI></OL>
+<P><FONT size=4>Starting small, with hitchhiker payloads on government funded 
+missions, we intend to use the credibility that such activity will engender to 
+mobilize larger resources that will enable stand-alone private robotic missions 
+and ultimately human exploration. </FONT></P>
+<P><B>Steering Committee</B>:</P>
+<UL>
+  <LI>Prof. Greg Benford, Astrophysicist, Author, Timescape, Martian Odyssey 
+  (U.S.A) 
+  <LI>Dr. Geoff Briggs, Center for Mars Explorer NASA AMES (U.S.A) 
+  <LI>John Connolly, NASA Johnson Space Center (U.S.A) 
+  <LI>Dr. Mike Griffin, Former NASA Associate Administrator for Exploration 
+  (U.S.A) 
+  <LI>Lt. Col. Scott Horowitz, NASA Astronaut (U.S.A) 
+  <LI>Tom Meyer, Boulder Center for Science and Policy (U.S.A) 
+  <LI>Dr. Chris McKay, NASA Ames Research Center (U.S.A) 
+  <LI>Declan O'Donell, Attorney (U.S.A) 
+  <LI>Donna Shirley, Manager Mars Exploration Program, Jet Propulsion Lab 
+  (U.S.A) 
+  <LI>Kim Stanley Robinson, author Red Mars, Green Mars, Blue Mars (U.S.A) 
+  <LI>Dr. Alan Stern, Southwest Research Institute (U.S.A) 
+  <LI>Dr. Carol Stoker, NASA Ames Research Center(U.S.A) 
+  <LI>Dr. Larry Lemke, NASA Ames Research Center(U.S.A) 
+  <LI>Rick Tumlinson, President, Space Frontier Foundation(U.S.A) 
+  <LI>Prof. Bruce Lusignian, Stanford University (U.S.A) 
+  <LI>Richard Wagner, Co-author, The Case for Mars (U.S.A) 
+  <LI>Maggie Zubrin, Pioneer Astronautics (U.S.A) 
+  <LI>Dr. Robert Zubrin, Pioneer Astronautics, author The Case for Mars (U.S.A) 
+  <LI>Marc Boucher, President, aTerra Technologies Corporation (Canada) 
+  <LI>Philip Dembo (United Kingdom) 
+  <LI>Bo Maxwell (United Kingdom) 
+  <LI>Dr. Michael Bosch (Germany)</LI></UL>
+<HR>
+
+<H2>A Private Initiative to Send Humans to Mars</H2>
+<P><B>By: Robert Zubrin</B></P>
+<P>Mars is the new frontier. The only world aside from Earth in our solar system 
+with sufficient resources to support life and, someday, a new branch of human 
+civilization, the Red Planet poses the central challenge faced by our era of 
+history.</P>
+<P><I>Humanity: Do you have what it takes to leave your cradle Earth to become a 
+multi-planet species?</I></P>
+<P>It is now clear that millions of people around the world are ready and 
+willing to answer this challenge in the affirmative. On July 4, 1997, when 
+NASA's Pathfinder probe landed on Mars, there were 100 million hits on the 
+mission web site. That is more than the number of people who vote in the United 
+States in a presidential election! It is more than the total number of Americans 
+actively for or against abortion, gun control, nationalized health care, or a 
+balanced budget, combined. Since the landing there have 700 million more hits. 
+Even assuming a significant repeat rate, the number is simply phenomenal.</P>
+<P>Yet despite this massive demonstration of support for Mars exploration, the 
+politicians in charge and their consultants and astrologers, appear deaf to the 
+call, providing virtually no government funding to prepare the way for human 
+Mars exploration. This has caused tremendous public frustration, exemplified for 
+me by the fact that since the publication of my book The Case for Mars, in 
+October 1996, I have received over 3000 letters or e-mails from people asking me 
+if there was any way we could initiate a human Mars exploration privately.</P>
+<P>I initially thought it impossible. However the public response to the 
+Pathfinder mission has convinced me otherwise. After all 700 million hits! At $1 
+each that would be enough to fund four Pathfinder missions. At $10 each, that 
+would be $7 billion, probably enough to fund a human Mars mission if done 
+privately. But how does one get the credibility required to mobilize the funding 
+that such broad based support represents?</P>
+<H3>The Mars Society</H3>
+<P>There is one way that can be done; by forming an organization that initiates 
+a program of activity, which in a series of escalating steps, proves to all 
+concerned that a real private Mars exploration effort is underway. This is the 
+method that Jacques Cousteau employed to raise resources for a series of 
+increasingly ambitious undersea exploration ventures. It is to carry out such a 
+program that the Mars Society is being formed, with the Founding Convention to 
+take place in Boulder Colorado August 13-16 of this year.</P>
+<P>Unless we are unexpectedly lucky with fundraising, we will have to start 
+small, perhaps with a hitchhiker payload or instrument flying on a NASA or ESA 
+Mars probe. This could probably be managed at a cost of about $5 million. Once 
+that is done, however, it should elevate the public profile of the Society 
+enough to allow the raising of funds on the order of $100 million, sufficient to 
+finance a complete private robotic exploration mission. My favorite candidate 
+for such a mission would be a Mars aerial photography mission carried out with 
+balloons, although there are many exciting alternative options, including long 
+distance ground rovers, orbiters with ground penetrating radar to search for 
+subsurface water, and others. If a private organization were to be successful in 
+implementing any mission of this type, the public excitement generated all over 
+the world could well be sufficient to allow billions of dollars to be raised, 
+enough to fund human Mars exploration either by the Society acting alone, or 
+perhaps on a cost-sharing basis with NASA or other government space 
+agencies.</P>
+<P>The Society's planned private Mars exploration effort and NASA's are not 
+exclusive. On the contrary, because every government effort pursuing Mars 
+exploration or technology development assists the cause and reduces the funding 
+burden of the private initiative, the Society will also engage in broad outreach 
+to instill the vision of pioneering Mars into the public and mobilize support 
+for ever for aggressive government-funded robotic and human Mars exploration 
+efforts.</P>
+<P>A preliminary steering committee for the Society has been formed, which 
+includes Mike Griffin, former NASA Associate Administrator for exploration, 
+myself, NASA scientists Christopher McKay and Carol Stoker, science fiction 
+author Kim Stanley Robinson, and many others. The Founding Convention of the 
+Mars Society will be a historic step, one that may be remembered for centuries 
+to come on the new world it opens. But history is not a spectator sport. We need 
+your talents and energy if the initiative is to succeed.</P>
+<P><A href="http://www.marssociety.org/"><FONT size=5>Join the Mars 
+Society</FONT></A></P>
+<P><A href="file:///C:/marsweb/Zubrin.html#Top">Back to Top </A></P>
+<HR>
+
+<P><A name=Mars_Links><STRONG><U>Mars Links</U></STRONG></A></P>
+<UL>
+  <LI><A href="http://www.marssociety.org/"><FONT color=#0000ff><STRONG><U>The 
+  Mars Society</U></STRONG></FONT></A> 
+  <LI><A href="http://www.drfast.net/mars">The Mars Society - Ohio Chapter</A> 
+  <LI><A href="http://www.jps.net/gangale/mars/calendar.htm">The Martian Time 
+  Web Site</A> 
+  <LI><A href="http://www.giss.nasa.gov/research/planets/mars/time.html">Time on 
+  Mars</A> 
+  <LI><A href="http://www.nw.net/mars/">The Mars Direct Homepage</A> 
+  <LI><A href="http://www.marswest.org/">West to Mars - Support Mars Direct 
+  Worldwide</A> 
+  <LI><A href="http://spot.colorado.edu/~marscase/Home.html">The Case for 
+  Mars</A> 
+  <LI><A href="http://www-mgcm.arc.nasa.gov/">Mars Today</A> 
+  <LI><A href="http://nova.stanford.edu/projects/mgs/dmwr.html">The Daily 
+  Martian Weather Report</A> 
+  <LI><A href="http://mars.jpl.nasa.gov/default.html">Mars Pathfinder</A> 
+  <LI><A href="http://mars.jpl.nasa.gov/mgs/">Mars Global Surveyor</A> 
+  <LI><A href="http://mars.jpl.nasa.gov/msp98/index.html">Mars Surveyor 98</A> 
+  <LI><A href="http://mars.jpl.nasa.gov/2001/index.html">Mars Surveyor 
+  2001</A></LI></UL>
+<P align=center><FONT size=2><!-- HTML Code for Mars Web Ring ends --><!-- HTML Code for Mars Web Ring starts --><!--TD WIDTH="23%"></TD><TD width="20%"><CENTER><A href="http://www.webring.org/cgi-bin/webring?home&ring=mars"><I>Join the Mars Web Ring Ring</I></A><BR><A href="http://www.webring.org/cgi-bin/webring?home&ring=mars"><IMG src="http://www.iag.net/~crs/mars/marsri.gif" width="100" height="40"></A><BR><FONT size="1">a member of Mars Web Ring</FONT><BR>[ <A href="http://www.webring.org/cgi-bin/webring?ring=mars&id=_36_&next">next site</A> |<A href="http://www.webring.org/cgi-bin/webring?ring=mars&id=_36_&skip">skip next site</A> |<A href="http://www.webring.org/cgi-bin/webring?ring=mars&id=_36_&next5">next 5 sites</A> ]<BR>[ <A href="http://www.webring.org/cgi-bin/webring?ring=mars&id=_36_&prev">previous site</A> |<A href="http://www.webring.org/cgi-bin/webring?ring=mars&id=_36_&sprev">back 2 sites</A> ]<BR></CENTER--><!-- HTML Code for Mars Web Ring ends --></FONT></P>
+<P align=center><A 
+href="http://www.webring.org/cgi-bin/webring?home&amp;ring=mars"><FONT 
+size=3><I>Join the Mars Web Ring Ring</I></FONT></A><FONT size=3><BR></FONT><A 
+href="http://www.webring.org/cgi-bin/webring?home&amp;ring=mars"><FONT 
+size=3><IMG height=40 src="" width=100></FONT></A><FONT size=3><BR></FONT><FONT 
+size=2>a member of Mars Web Ring</FONT><FONT size=3><BR>[ </FONT><A 
+href="http://www.webring.org/cgi-bin/webring?ring=mars&amp;id=_36_&amp;next"><FONT 
+size=3>next site</FONT></A><FONT size=3> | </FONT><A 
+href="http://www.webring.org/cgi-bin/webring?ring=mars&amp;id=_36_&amp;skip"><FONT 
+size=3>skip next site</FONT></A><FONT size=3> | </FONT><A 
+href="http://www.webring.org/cgi-bin/webring?ring=mars&amp;id=_36_&amp;next5"><FONT 
+size=3>next 5 sites</FONT></A><FONT size=3> ]<BR>[ </FONT><A 
+href="http://www.webring.org/cgi-bin/webring?ring=mars&amp;id=_36_&amp;prev"><FONT 
+size=3>previous site</FONT></A><FONT size=3> | </FONT><A 
+href="http://www.webring.org/cgi-bin/webring?ring=mars&amp;id=_36_&amp;sprev"><FONT 
+size=3>back 2 sites</FONT></A><FONT size=3> ]</FONT><FONT size=2><BR></CENTER--><!-- HTML Code for Mars Web Ring ends --></FONT></P>
+<P align=center><A href="file:///C:/marsweb/Zubrin.html#Top"><FONT size=2>Back 
+to Top </FONT></A></P>
+<HR>
+
+<P align=center><FONT size=2>Please </FONT><A 
+href="mailto:jroche@harborcom.net"><FONT size=2>send me mail</FONT></A><FONT 
+size=2> if you have any suggestions on how I might improve this page.</FONT></P>
+<P align=center><FONT 
+size=2><!-- BEGIN LE FASTCOUNTER CODE --></FONT><AHREF="HTTP: 
+fastcounter-login?75002? fc cgi-bin 
+member.linkexchange.com><FONTSIZE="2"><IMGSRC="HTTP: 
+fastcounter?75002+150011?border="0" 
+fastcounter.linkexchange.com></FONT></A><AHREF="HTTP: fastcounter-login?75002? 
+fc cgi-bin member.linkexchange.com><FONTSIZE="2"><!-- END LE FASTCOUNTER CODE --></FONT></A><FONT 
+size=2><BR><!-- BEGIN LE FASTCOUNTER LINK --></FONT><A 
+href="http://www.fastcounter.com/fc-join"><FONTSIZE="1" face="Arial">LE 
+FastCounter</FONT></A><AHREF="HTTP: fc-join? www.fastcounter.com><FONT 
+face=Arial size=1><!-- END LE FASTCOUNTER LINK --></FONT></A><AHREF="HTTP: 
+fc-join? www.fastcounter.com><FONT face=Arial size=1></CENTER--></FONT></A><FONT 
+size=2> </FONT></P>
+<P align=center><FONT size=2>This page was installed March 08, 1998</FONT></P>
+<P align=center><FONT size=2>Last revised: August 25, 1999. 
+</FONT></P></BODY></HTML>

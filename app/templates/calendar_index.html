@@ -1,0 +1,17 @@
+{% extends "calendar_base.html" %}
+{% block content %}
+
+    <div class="container theme-showcase" role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>A Calendar for Mars</h1>
+        <p>By Dr. Robert Zubrin</p>
+        <small>Published in Ad Astra, the magazine of the National Space Society (Ad Astra, Nov/Dec93, vol. 5 Issue 6, p25).</small>
+      </div>
+
+      {% include "calendar_article.html" %}
+
+    </div> <!-- /container -->
+
+{% endblock %}
