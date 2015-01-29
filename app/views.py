@@ -1,5 +1,6 @@
 from flask import render_template
 from app import app
+from app.mars.marsdate import MarsDate
 
 active_tabs = {
     'index_active': '',
@@ -15,6 +16,11 @@ def zubrin_calendar():
 @app.route('/')
 @app.route('/calendar_index')
 def calendar_index():
+    # get todays zubrin calendar date
+    marsdate = MarsDate()
+    todays_mars_calendar_date = marsdate.today()
+
+    # set the active tab for the page navigation
     set_active_tab('index_active')
     locals().update(active_tabs)
 

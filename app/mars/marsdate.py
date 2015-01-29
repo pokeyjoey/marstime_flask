@@ -15,6 +15,9 @@ class MarsDate(object):
         This program calculates the current date on Mars according to a calendar
         invented by Dr. Robert Zubrin.
     """
+    # MONTHS_OF_MARS dictionary has a key value of the day of the 
+    # martian year that corresponds to the last day of the month
+    # of its corresponding Martian month.
     SOLS_IN_YEAR = 669
     MONTHS_OF_MARS = {
         61  : "Gemini",
@@ -81,12 +84,9 @@ class MarsDate(object):
         """
         mars_month = "Set Me"
 
-        # month_mars dictionary has a key value of the day of the 
-        # martian year that corresponds to the last day of the month
-        # of each of the 12 Martian months.
-        # - iterate through the keys until we hit a day of the year
-        #   less than the key. 
-        # - Dictionary keys are organized from lowest to highest.
+        # iterate through the last_day_of_month until we hit a day of the year
+        # less than that value. 
+        # - Ordered dictionary keys are organized from lowest to highest.
         for last_day_of_month in self.months_of_mars.iterkeys():
             if day_of_year_mars <= last_day_of_month:
                 mars_month = self.months_of_mars[last_day_of_month]
@@ -97,7 +97,7 @@ class MarsDate(object):
     def _month_mars_day_of_month(self, day_of_year_mars):
         """ Return the string for the day of the current Martian month.
         """
-        # initialize to Gemini the first month of the MArtian year
+        # initialize to Gemini the first month of the Martian year
         last_day_of_previous_month = 61 
         day_of_month = 0
 

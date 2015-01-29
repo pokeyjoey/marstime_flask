@@ -5,9 +5,16 @@
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <h1>A Calendar for Mars</h1>
-        <p>By Dr. Robert Zubrin</p>
-        <small>Published in Ad Astra, the magazine of the National Space Society (Ad Astra, Nov/Dec93, vol. 5 Issue 6, p25).</small>
+        <div class="row">
+            <div class="col-md-8">
+                <h1>A Calendar for Mars</h1>
+                <p>By Dr. Robert Zubrin</p>
+                <small>Published in Ad Astra, the magazine of the National Space Society (Ad Astra, Nov/Dec93, vol. 5 Issue 6, p25).</small>
+            </div>
+            <div class="col-md-4">
+                <p class="thumbnail">Todays Date: {{todays_mars_calendar_date}}</p>
+            </div>
+        </div>
       </div>
 
       {% include "calendar_article.html" %}
