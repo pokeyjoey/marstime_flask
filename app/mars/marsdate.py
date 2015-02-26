@@ -5,33 +5,33 @@ import roman
 
 from collections import OrderedDict
 
+
 class MarsDate(object):
     """
     TITLE:  ZubrinCalendar
     AUTHOR: Jeffery R Roche
     DATE  : 1/26/2015
-     
     PURPOSE:
-        This program calculates the current date on Mars according to a calendar
-        invented by Dr. Robert Zubrin.
+        This program calculates the current date on Mars according to a
+        calendar invented by Dr. Robert Zubrin.
     """
-    # MONTHS_OF_MARS dictionary has a key value of the day of the 
+    # MONTHS_OF_MARS dictionary has a key value of the day of the
     # martian year that corresponds to the last day of the month
     # of its corresponding Martian month.
     SOLS_IN_YEAR = 669
     MONTHS_OF_MARS = {
-        61  : "Gemini",
-        126 : "Cancer",
-        192 : "Leo",
-        257 : "Virgo",
-        317 : "Libra",
-        371 : "Scorpius",
-        421 : "Sagittarius",
-        468 : "Capricorn",
-        514 : "Aquarius",
-        562 : "Pisces",
-        613 : "Aries",
-        669 : "Taurus"
+        61 : "Gemini",
+        126: "Cancer",
+        192: "Leo",
+        257: "Virgo",
+        317: "Libra",
+        371: "Scorpius",
+        421: "Sagittarius",
+        468: "Capricorn",
+        514: "Aquarius",
+        562: "Pisces",
+        613: "Aries",
+        669: "Taurus"
     }
 
     def __init__(self):
@@ -39,7 +39,7 @@ class MarsDate(object):
             sorted(self.MONTHS_OF_MARS.items(), key=lambda t: t[0]))
 
     def today(self):
-        """ Return todays Martian Calendar date provided with an equivalent 
+        """ Return todays Martian Calendar date provided with an equivalent
             Earth date represented by a datetime.date object.
         """
         today = datetime.date.today()
@@ -51,8 +51,8 @@ class MarsDate(object):
         """ Return martian date for the Zubrin Calendar as represented
             by the provided datetime.date object.
 
-            - returns date of the form: year-month- day of month (Roman Numberal)
-                example - 29 Pisces XLIX
+            - returns date of the form: year-month- day of month
+                (Roman Numberal) example - 29 Pisces XLIX
         """
         # get month, day, and year
         month = datetime_date_object.month
@@ -85,7 +85,7 @@ class MarsDate(object):
         mars_month = "Set Me"
 
         # iterate through the last_day_of_month until we hit a day of the year
-        # less than that value. 
+        # less than that value.
         # - Ordered dictionary keys are organized from lowest to highest.
         for last_day_of_month in self.months_of_mars.iterkeys():
             if day_of_year_mars <= last_day_of_month:
@@ -98,7 +98,7 @@ class MarsDate(object):
         """ Return the string for the day of the current Martian month.
         """
         # initialize to Gemini the first month of the Martian year
-        last_day_of_previous_month = 61 
+        last_day_of_previous_month = 61
         day_of_month = 0
 
         # if we are in the first month Gemini, day_of_month equals
@@ -108,7 +108,7 @@ class MarsDate(object):
             return day_of_month
 
         # determine which month we are in so we can calculate the day
-        # of the month.            
+        # of the month.
         for last_day_of_month in self.months_of_mars.iterkeys():
             if day_of_year_mars <= last_day_of_month:
                 day_of_month = \
@@ -118,4 +118,3 @@ class MarsDate(object):
             last_day_of_previous_month = last_day_of_month
 
         return day_of_month
-                   
