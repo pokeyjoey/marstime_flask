@@ -48,7 +48,7 @@ def calendar_areogator():
     return render_template('calendar_areogator.html', **locals())
 
 def set_active_tab(active_tab):
-    for key in active_tabs.iterkeys():
+    for key in active_tabs.keys():
         if key == active_tab:
             state = "active"
         else:

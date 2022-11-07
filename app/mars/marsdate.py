@@ -87,7 +87,7 @@ class MarsDate(object):
         # iterate through the last_day_of_month until we hit a day of the year
         # less than that value.
         # - Ordered dictionary keys are organized from lowest to highest.
-        for last_day_of_month in self.months_of_mars.iterkeys():
+        for last_day_of_month in self.months_of_mars.keys():
             if day_of_year_mars <= last_day_of_month:
                 mars_month = self.months_of_mars[last_day_of_month]
                 break
@@ -109,7 +109,7 @@ class MarsDate(object):
 
         # determine which month we are in so we can calculate the day
         # of the month.
-        for last_day_of_month in self.months_of_mars.iterkeys():
+        for last_day_of_month in self.months_of_mars.keys():
             if day_of_year_mars <= last_day_of_month:
                 day_of_month = \
                     (day_of_year_mars - (last_day_of_previous_month + 1)) + 1
